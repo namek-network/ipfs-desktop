@@ -210,17 +210,17 @@ function buildMenu (ctx) {
           click: () => { shell.openExternal(`https://github.com/ipfs/go-ipfs/releases/v${GO_IPFS_VERSION}`) }
         },
         { type: 'separator' },
-        {
-          id: 'checkForUpdates',
-          label: i18n.t('checkForUpdates'),
-          click: () => { ctx.manualCheckForUpdates() }
-        },
-        {
-          id: 'checkingForUpdates',
-          label: i18n.t('checkingForUpdates'),
-          enabled: false
-        },
-        { type: 'separator' },
+        // {
+        //   id: 'checkForUpdates',
+        //   label: i18n.t('checkForUpdates'),
+        //   click: () => { ctx.manualCheckForUpdates() }
+        // },
+        // {
+        //   id: 'checkingForUpdates',
+        //   label: i18n.t('checkingForUpdates'),
+        //   enabled: false
+        // },
+        // { type: 'separator' },
         {
           label: i18n.t('viewOnGitHub'),
           click: () => { shell.openExternal('https://github.com/ipfs-shipyard/ipfs-desktop/blob/master/README.md') }
@@ -331,9 +331,9 @@ module.exports = function (ctx) {
     menu.getMenuItemById('setCustomBinary').visible = !hasCustomBinary()
     menu.getMenuItemById('clearCustomBinary').visible = hasCustomBinary()
 
-    menu.getMenuItemById('checkForUpdates').enabled = !isUpdating
-    menu.getMenuItemById('checkForUpdates').visible = !isUpdating
-    menu.getMenuItemById('checkingForUpdates').visible = isUpdating
+    // menu.getMenuItemById('checkForUpdates').enabled = !isUpdating
+    // menu.getMenuItemById('checkForUpdates').visible = !isUpdating
+    // menu.getMenuItemById('checkingForUpdates').visible = isUpdating
 
     if (status === STATUS.STARTING_FINISHED) {
       tray.setImage(icon(on))

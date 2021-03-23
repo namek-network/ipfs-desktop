@@ -129,7 +129,7 @@ module.exports = async function (ctx) {
       apiAddress = ipfsd.apiAddr
       url.searchParams.set('api', apiAddress)
       updateLanguage()
-      window.loadURL(url.toString())
+      window.loadURL('https://webui.ipfs.io/')
     }
   })
 
@@ -172,7 +172,7 @@ module.exports = async function (ctx) {
     })
 
     updateLanguage()
-    window.loadURL(url.toString())
+    window.loadURL('https://webui.ipfs.io/')
   })
 }
 
