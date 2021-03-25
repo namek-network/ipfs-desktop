@@ -124,7 +124,7 @@ function applyCrustApi (config) {
     origins = []
   }
 
-  const originsToAdd = ['https://apps.crust.network', 'http://localhost:3000', 'http://127.0.0.1:5001', 'https://webui.ipfs.io']
+  const originsToAdd = ['https://apps.crust.network', 'https://crustapps.net', 'http://localhost:3000', 'http://127.0.0.1:5001', 'https://webui.ipfs.io']
 
   const diff = _.difference(originsToAdd, origins)
 
